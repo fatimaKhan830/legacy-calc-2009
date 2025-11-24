@@ -13,8 +13,9 @@ The objectives are:
 
 
 		#HOW TO BUILD IT
-open terminal in the project folder  and run:
-  g++ -std=c++11 *.cpp -o calc
+opening gist link and copy code into src's main.cpp file and run using:
+
+ g++ -std=c++11 src/main.cpp -o calc
 
 		#HOW TO RUN IT
   ./calc -cp -a 100000 -i 12 -n 360
