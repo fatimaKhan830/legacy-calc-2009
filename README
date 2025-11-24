@@ -1,3 +1,39 @@
+		#LEGACY LOAN CALCULATOR (CHANGD VERSION)
+
+This is our changed version of the loan calculator
+
+The objectives are:
+
+	1) Removing the hard-coded values
+	2) Correcting existing errors
+	3) Preventing integer overflow errors
+	4) Support external configuration files
+	5) Include the unit testing
+	6) Generating project documentation using Doxygen
+
+
+		#HOW TO BUILD IT
+open terminal in the project folder  and run:
+  g++ -std=c++11 *.cpp -o calc
+
+		#HOW TO RUN IT
+  ./calc -cp -a 100000 -i 12 -n 360
+
+ OPTIONS:
+-a: loan amount
+-i: interest rate
+-n: number of payements
+-cp: calculate monthly payement
+
+	#NEW FILES ADDED 
+
+*Loan.h
+*Loan.cpp
+*config.txt
+*test/test_emi.cpp(the unit tests)
+
+ 
+
 A simple loan calculator written in C++ using a Qt GUI.
 
 Can be compiled with either make or SCons as follows:
