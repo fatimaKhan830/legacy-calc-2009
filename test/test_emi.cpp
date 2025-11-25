@@ -1,4 +1,4 @@
-#include <iostream> //TESTING FILE
+#include<iostream> //TESTING FILE
 #include <cmath>
 #include "../src/Loan.h" 
 using namespace std;
@@ -10,7 +10,7 @@ int main() {
 
     long double expected1=933.0;
     if (fabsl(monthly1-expected1)<1.0)
-    {   // fabsl() = absolute for long double
+    {   
         cout<<"[TEST 1 PASSED] Normal EMI calculation successful"<<endl;
     }
     else
@@ -19,13 +19,12 @@ int main() {
         cout<<"Expected around "<<expected1<<", got "<<monthly1<<endl;
     }
 
-    // TEST 2: Zero years should be invalid input in real program
+    // TEST 2: Invalid input
 
-    // We only check that program does not crash
     Loan loan2(100000,16,7);
     cout<<"[TEST 2 PASSED] Validation for zero years handled in main.cpp"<<endl;
 
-    //TEST 3: Large values shouldn't overflow
+    //TEST 3: avoid overflow of large values
     Loan loan3(290000,9,36);
     long double monthly3 = loan3.calculateMonthlyPayment();
 
