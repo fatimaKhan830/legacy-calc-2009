@@ -1,4 +1,4 @@
-		#LEGACY LOAN CALCULATOR (CHANGD VERSION)
+		##LEGACY LOAN CALCULATOR (CHANGD VERSION)
 
 This is our changed version of the loan calculator
 
@@ -12,13 +12,28 @@ The objectives are:
 	6) Generating project documentation using Doxygen
 
 
-		#HOW TO BUILD IT
+		##HOW TO BUILD IT
 opening gist link and copy code into src's main.cpp file and run using:
 
- g++ -std=c++11 src/main.cpp -o calc
+ g++ -std=c++11 src/main.cpp srs/Loan.cpp -o calc
 
-		#HOW TO RUN IT
-  ./calc -cp -a 100000 -i 12 -n 360
+		##HOW TO RUN IT
+  ./calc 
+    
+
+   	##HOW TO RUN TEST FILES
+
+g++ -std=c++11 src/Loan.cpp test/test_emi.cpp -o test_emi
+./test_emi
+
+#MODEFICATIONS:
+    * Improved input validation
+    * Fixed precision issues with long double
+    * Added default settings through a config file
+    * Reorganized code using a Loan class
+    * Added unit tests
+    * Added Doxygen-based documentation
+
 
  OPTIONS:
 -a: loan amount
@@ -26,7 +41,7 @@ opening gist link and copy code into src's main.cpp file and run using:
 -n: number of payements
 -cp: calculate monthly payement
 
-	#NEW FILES ADDED 
+	##NEW FILES ADDED 
 
 *Loan.h
 *Loan.cpp
